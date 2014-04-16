@@ -11,7 +11,7 @@ public class QueenProblemSolver {
 
         for (int row = 0; row < chessboard.getSize(); row++) {
             if (queenProblemPositionValidator.isValid(chessboard, row, column)) {
-                chessboard.assignQueenToPosition(row, column);
+                chessboard.assignPieceToPosition(row, column);
                 if (findSolution(chessboard, column + 1) == true) {
                     return true;
                 } else {

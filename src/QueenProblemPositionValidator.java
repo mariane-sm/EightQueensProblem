@@ -10,15 +10,9 @@ public class QueenProblemPositionValidator {
         return true;
     }
 
-    private boolean hasQueenInTheSameDownLeftDiagonal(Chessboard chessboard, int row, int col) {
-        for (int i=row, j=col; i < chessboard.getSize() && j >=0 ; i++, j--)
-            if (chessboard.getPosition(i, j) == 1) return true;
-        return false;
-    }
-
-    private boolean hasQueenInTheSameUpLeftDiagonal(Chessboard chessboard, int row, int col) {
-        for (int i=row, j=col; i >=0  && j >=0 ; i--, j--)
-            if (chessboard.getPosition(i, j) == 1) return true;
+    private boolean hasQueenInTheSameRow(Chessboard chessboard, int row, int col) {
+        for (int i=row; i >=0 ; i--)
+            if (chessboard.getPosition(i, col) == 1) return true;
         return false;
     }
 
@@ -28,9 +22,15 @@ public class QueenProblemPositionValidator {
         return false;
     }
 
-    private boolean hasQueenInTheSameRow(Chessboard chessboard, int row, int col) {
-        for (int i=row; i >=0 ; i--)
-            if (chessboard.getPosition(i, col) == 1) return true;
+    private boolean hasQueenInTheSameUpLeftDiagonal(Chessboard chessboard, int row, int col) {
+        for (int i=row, j=col; i >=0  && j >=0 ; i--, j--)
+            if (chessboard.getPosition(i, j) == 1) return true;
+        return false;
+    }
+
+    private boolean hasQueenInTheSameDownLeftDiagonal(Chessboard chessboard, int row, int col) {
+        for (int i=row, j=col; i < chessboard.getSize() && j >=0 ; i++, j--)
+            if (chessboard.getPosition(i, j) == 1) return true;
         return false;
     }
 }

@@ -1,5 +1,8 @@
 public class Chessboard {
 
+    public static final int HAS_PIECE_IN_POSITION = 1;
+    public static final int EMPTY_POSITION = 0;
+
     private final int[][] chessboard;
 
     public Chessboard(int size) {
@@ -14,11 +17,11 @@ public class Chessboard {
         return chessboard[row][column];
     }
 
-    public void assignQueenToPosition(int row, int column) {
-        chessboard[row][column] = 1;
+    public void assignPieceToPosition(int row, int column) {
+        chessboard[row][column] = HAS_PIECE_IN_POSITION;
     }
 
     public void removePieceFromPosition(int row, int column) {
-        chessboard[row][column] = 0;
+        chessboard[row][column] = EMPTY_POSITION;
     }
 }
