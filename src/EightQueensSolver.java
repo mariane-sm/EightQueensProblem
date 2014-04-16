@@ -1,9 +1,9 @@
 public class EightQueensSolver{
 
-    private final ChessPositionValidator chessPositionValidator;
+    private final QueenProblemPositionValidator queenProblemPositionValidator;
 
     public EightQueensSolver() {
-        chessPositionValidator = new ChessPositionValidator();
+        queenProblemPositionValidator = new QueenProblemPositionValidator();
     }
 
     public boolean solve(int[][] grid, int column) {
@@ -11,7 +11,7 @@ public class EightQueensSolver{
         if (column == grid.length) return true;
 
         for (int row = 0; row < grid.length; row++) {
-            if (chessPositionValidator.isValid(grid, row, column)) {
+            if (queenProblemPositionValidator.isValid(grid, row, column)) {
                 grid[row][column] = 1;
                 if(solve(grid, column + 1) == true)
                     return true;
