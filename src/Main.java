@@ -1,16 +1,16 @@
 public class Main {
 
     public static final int INITIAL_COLUMN = 0;
-    private static final int BOARDSIZE = 4;
-    private static final int[][] board = new int[BOARDSIZE][BOARDSIZE];
+    public static final int BOARDSIZE = 4;
 
     public static void main(String argv[]) {
 
         QueenProblemSolver queenProblemSolver = new QueenProblemSolver();
         ChessboardPrinter chessboardPrinter = new ChessboardPrinter();
+        Chessboard chessboard = new Chessboard(BOARDSIZE);
 
-        if (queenProblemSolver.findSolution(board, INITIAL_COLUMN)) {
-            chessboardPrinter.print(board);
+        if (queenProblemSolver.findSolution(chessboard, INITIAL_COLUMN)) {
+            chessboardPrinter.print(chessboard);
         } else {
             System.out.println("No solution");
         }

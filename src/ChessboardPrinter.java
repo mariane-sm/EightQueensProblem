@@ -1,9 +1,9 @@
 public class ChessboardPrinter {
 
-    public void print(int[][] grid) {
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid.length; j++) {
-                System.out.print(" " + grid[i][j]);
+    public void print(Chessboard chessboard) {
+        for (int i = 0; i < chessboard.getSize(); i++) {
+            for (int j = 0; j <chessboard.getSize(); j++) {
+                System.out.print(" " + chessboard.getPosition(i, j));
             }
             System.out.println("");
         }
