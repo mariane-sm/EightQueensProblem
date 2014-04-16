@@ -6,7 +6,10 @@ public class Chessboard {
     private final int[][] chessboard;
 
     public Chessboard(int size) {
-        chessboard = new int[size][size];
+        if (size > 0)
+            chessboard = new int[size][size];
+        else
+            throw new IllegalArgumentException("Chessboard needs to have size bigger than zero.");
     }
 
     public int getSize() {
