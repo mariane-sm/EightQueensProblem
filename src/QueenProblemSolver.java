@@ -1,8 +1,8 @@
-public class EightQueensSolver{
+public class QueenProblemSolver {
 
     private final QueenProblemPositionValidator queenProblemPositionValidator;
 
-    public EightQueensSolver() {
+    public QueenProblemSolver() {
         queenProblemPositionValidator = new QueenProblemPositionValidator();
     }
 

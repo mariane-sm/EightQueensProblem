@@ -11,7 +11,7 @@ public class QueenProblemPositionValidator {
     }
 
     private boolean hasQueenInTheSameDownLeftDiagonal(int[][] grid, int row, int col) {
-        for (int i=row, j=col; i  < grid.length && j >=0 ; i++, j--)
+        for (int i=row, j=col; i < grid.length && j >=0 ; i++, j--)
             if (grid[i][j] == 1) return true;
         return false;
     }
@@ -23,13 +23,13 @@ public class QueenProblemPositionValidator {
     }
 
     private boolean hasQueenInTheSameColumn(int[][] grid, int row, int col) {
-        for (int i=col ; i >= 0 ; i--)
+        for (int i=col; i >= 0 ; i--)
             if (grid[row][i] == 1) return true;
         return false;
     }
 
     private boolean hasQueenInTheSameRow(int[][] grid, int row, int col) {
-        for (int i=row ; i >=0 ; i--)
+        for (int i=row; i >=0 ; i--)
             if (grid[i][col] == 1) return true;
         return false;
     }

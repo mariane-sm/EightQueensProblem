@@ -1,13 +1,15 @@
 public class Main {
 
+    public static final int INITIAL_COLUMN = 0;
     private static final int BOARDSIZE = 4;
     private static final int[][] board = new int[BOARDSIZE][BOARDSIZE];
 
-    private static final EightQueensSolver eightQueensSolver = new EightQueensSolver();
-    private static final ChessboardPrinter chessboardPrinter = new ChessboardPrinter();
-
     public static void main(String argv[]) {
-        if (eightQueensSolver.findSolution(board, 0)) {
+
+        QueenProblemSolver queenProblemSolver = new QueenProblemSolver();
+        ChessboardPrinter chessboardPrinter = new ChessboardPrinter();
+
+        if (queenProblemSolver.findSolution(board, INITIAL_COLUMN)) {
             chessboardPrinter.print(board);
         } else {
             System.out.println("No solution");
